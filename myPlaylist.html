@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="area-container">
+        <div class="cgmo-title">CGMO</div>
+        <div id="add-song-container">
+            <input type="text" class="selectTemplate" list="tracks" id="add-track" onkeyup="getSongAPI(id, 'tracks')"
+                placeholder="Aggiungi le tue canzoni" required>
+            <datalist id="tracks"></datalist>
+            <button type="button" id="add-song-button" onclick="addSong(); setStorage()"></button>
+        </div>
+        <div id="remove-song-container">
+            <input type="text" class="selectTemplate" list="playlist-tracks" id="remove-track"
+                onkeyup="getSongPlaylist('playlist-tracks')" placeholder="Rimuovi una canzone" required>
+            <datalist id="playlist-tracks"></datalist>
+            <button id="remove-song-button" onclick="removeSong()"></button>
+        </div>
+        <div id="div2">
+        </div>
+        <button id="playlist-modifier-button" onclick="displayModifyPlaylist()">Modifica</button>
+        <form id="modify-playlist-form" method="post">
+            <div class="input-field">
+                <input type="text" id="playlist-newname" placeholder="Nome Playlist">
+            </div>
+            <div class="input-field">
+                <input type="text" id="playlist-newdescription" placeholder="Descrizione">
+            </div>
+            <div id="add-tag-container">
+                <div class="input-field">
+                    <input type="text" id="tag-modify" placeholder="Aggiungi tags">
+                </div>
+                <button type="button" id="add-tag-button" onclick="addTagModify()"></button>
+            </div>
+            <div id="remove-tag-container">
+                <div class="input-field">
+                    <input type="text" id="removetag" placeholder="Rimuovi tags">
+                </div>
+                <button type="button" id="remove-tag-button" onclick="removeTag()"></button>
+            </div>
+            <div class="input-field">
+                <input type="radio" class="options-select" name="select-visibility" id="newoption-1" value="pubblica">
+                <label for="option-1" class="options">Pubblica</label>
+                <input type="radio" class="options-select" name="select-visibility" value="privata" checked>
+                <label for="option-2" class="options">Privata</label>
+            </div>
+            <button type="button" id="modify-playlist-confirm-button" onclick="modifyPlaylist()">Conferma</button>
+            <button type="button" id="cancel-playlist-button" onclick="deletePlaylist()">Cancella</button>
+
+        </form>
+        <div id="aggiungi-playlist">Aggiungi alle tue playlist</div>
+        <button type="button" id="add-playlist-button" onclick="addPlaylist()"></button>
+        <button type="button" id="remove-playlist-button" onclick="removePlaylist()"></button>
+        <div id="back-container">
+            <button id="go-back-button" onclick="window.location.href = 'myPlaylist.html'">Torna
+                indietro</button>
+        </div>
+        <div id="homepage-container">
+            <button id="homepage-button" onclick="setStorage(); window.location.href = 'Homepage.html'">Torna
+                alla home</button>
+        </div>
+    </div>
+    <script src="myPlaylist.js"></script>
+</body>
+
+</html>

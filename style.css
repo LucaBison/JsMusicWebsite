@@ -1,0 +1,436 @@
+@font-face {
+    font-family: Kanit;
+    src: url(Fonts/Kanit-Bold.ttf);
+    font-weight: bold;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Kanit;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html { 
+    background: url("Images/bg.svg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h3 {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #FCE88B;
+}
+
+
+.cgmo-title {
+    text-align: center;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #FCE88B;
+    text-transform: uppercase;
+    font-size: 44px;
+    letter-spacing: 5px;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column; 
+}
+#div1,
+#div2 {
+    display: flex;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    min-width: 800px;
+}
+
+.songs-displayer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.playlist-displayer,
+.song-displayer {
+    align-self: center;
+    font-size: 16px;
+    padding: 5px;
+    width: 350px;
+    background-color: #98ccfd;
+    border-radius: 50px;
+    min-height: 65px;
+    height: auto;
+    margin: 15px;
+}
+
+.image-displayer{
+    width: 150px;
+    height: 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.song-displayer{
+    font-size: 14px;
+    width: 250px;
+    border-radius: 5px;
+}
+.area-container,
+#sign-in-form,
+#sign-up-form,
+#modify-credencials-form,
+#modify-area-container,
+#playlist-container,
+#explore-container,
+#create-playlist-form,
+#modify-playlist-form {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 3px;
+}
+
+
+#modify-playlist-form {
+    margin-top: 10px;
+}
+#add-song-container,
+#add-tag-container,
+#remove-tag-container,
+#remove-song-container,
+#search-song-container,
+#search-tag-container,
+.add-tag-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#add-song-container,
+#add-tag-container,
+#search-song-container {
+    margin-top: 20px;
+    margin-bottom: none;
+}
+
+#remove-tag-container {
+    margin-bottom: 20px;
+}
+
+#remove-song-container,
+#search-tag-container{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+.input-field,
+#modify-button,
+#playlist-button,
+#explore-button,
+#playlist-creator-button{
+    display: flex;
+    align-self: center;
+    font-size: 16px;
+    height: 38px;
+    width: 300px;
+    margin: 5px 10px;
+    padding: 4px;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    border-radius: 50px;
+    background-color: #98ccfd;
+}
+
+#aggiungi-playlist{
+    align-self: center;
+    font-size: 16px;
+    width: 300px;
+    margin: 5px 10px;
+    padding: 4px;
+    border-radius: 50px;
+    background-color: #98ccfd;
+}
+.options{
+    background-color: #98ccfd;
+    align-self: center;
+    width: 70px;
+    padding-left: 5px;
+}
+
+.options-select{
+    align-self: center;
+    width: 20px;
+    height: 20px;
+}
+
+.input-field-vertical {
+    display: flex;
+    align-self: center;
+    width: 300px;
+    margin: 5px 10px;
+    padding: 4px;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: #98ccfd;
+}
+
+.selectTemplate {
+    border-radius: 50px;
+    background-color: #98ccfd;
+    align-self: center;
+    text-align: center;
+    width: 70%;
+    max-width: 300px;
+    margin: 3px;
+}
+
+#selectGenres1,
+#selectGenres2,
+#selectGenres3,
+#selectArtist1, 
+#selectArtist2,
+#selectArtist3 {
+    align-self: center;
+    text-align: center;
+    width: 70%;
+    margin: 5px;
+}
+
+.input-field img,
+.res-area-container img{
+    width: 20px;
+}
+
+#confirm-signin-button,
+#confirm-signup-button,
+#create-playlist-confirm-button,
+#modify-playlist-confirm-button,
+#logout-button,
+#cancel-playlist-button {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: 10px;
+    margin-bottom: 80px;
+    border-radius: 50px;
+    width: 100px;
+    text-transform: uppercase;
+    background-color: #98ccfd;
+}
+
+#modify-playlist-confirm-button {
+    margin-top: 30px ;
+    margin-bottom: 30px;
+}
+
+#display-sign-up-text{
+    align-self: center;
+    width: 300px;
+    text-align: center;
+    border-top:#98ccfd solid 2px;
+    padding-top: 5px;
+    color:#FCE88B;
+}
+
+#display-sign-in-text {
+    align-self: center;
+    width: 300px;
+    text-align: center;
+    border-top:#001220 solid 2px;
+    padding-top: 5px;
+    color: #041424;
+}
+#logout-container,
+#back-container,
+#homepage-container {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    border-top:#FCE88B solid 2px;
+    padding-top: 5px;
+    margin-top: 30px;
+}
+
+#back-container,
+#homepage-container {
+    border-top:#041424 solid 2px;
+}
+
+#private-area-title{
+    margin-bottom: 20px;
+}
+
+#display-sign-up,
+#display-sign-in,
+#modify-confirm-button,
+#go-back-button,
+#homepage-button,
+#cancel-profile-button,
+#cancel-confirm-button,
+#playlist-modifier-button {
+    align-self: center;
+    width: 100px;
+    text-transform: uppercase;
+    background-color: #98ccfd;
+    border-radius: 50px;
+    margin-top: 5px;
+}
+
+#go-back-button,
+#homepage-button {
+    width: 150px;
+    margin-top: 5px;
+    display: block;
+    align-self: center;
+}
+
+#modify-button {
+    min-width: 290px;
+    background: url(Images/setting.png);
+    background-repeat:no-repeat;
+    background-position: 5%;
+    background-size: 20px, 30px;
+    background-color: #98ccfd;
+}
+
+#playlist-button {
+    min-width: 290px;
+    background: url(Images/musical-note.png);
+    background-repeat:no-repeat;
+    background-position: 5%;
+    background-size: 20px, 30px;
+    background-color: #98ccfd;
+}
+
+#tag-search-button,
+#song-search-button {
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    align-self: center;
+    background: url(Images/search.png);
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-color: #98ccfd;
+}
+
+#playlist-creator-button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    min-width: 290px;
+    background: url(Images/add.png);
+    background-repeat:no-repeat;
+    background-position: 5%;
+    background-size: 20px, 30px;
+    background-color: #98ccfd;
+}
+
+#add-song-button,
+#add-tag-button,
+#add-playlist-button {
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    align-self: center;
+    background: url(Images/add.png);
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-color: #98ccfd;
+}
+
+#remove-song-button,
+#remove-tag-button,
+#remove-playlist-button {
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    align-self: center;
+    background: url(Images/minus.png);
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-color: #98ccfd;
+}
+
+#explore-button {
+    min-width: 290px;
+    background: url(Images/search.png);
+    background-repeat:no-repeat;
+    background-position: 5%;
+    background-size: 20px, 30px;
+    background-color: #98ccfd;
+}
+#cancel-profile-button {
+    display: block;
+    width: 150px;
+    margin-top: 70px;
+}
+
+#cancel-confirm-button{
+    margin-top: 10px;
+}
+
+/* hide things */
+
+#display-sign-in,
+#cancel-confirm-button,
+#sign-up-form,
+#modify-playlist-form,
+#create-playlist-form,
+#add-playlist-button,
+#aggiungi-playlist, 
+#back-container,
+#remove-playlist-button,
+#searchResults,
+#add-playlist-button,
+#crea-playlist{
+    display: none;
+}
+
+input {
+    width: 75%;
+    background: none;
+    border: none;
+    text-align: left;
+    margin-left: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+    padding: 3px;
+}
+
+input:focus {
+    border: none;
+}
+
+@media only screen and (min-width: 1600px) {
+    #display-sign-in-text {
+        border-top:#c27efc solid 2px;
+        color: #c27efc;
+    }
+}
+
+
+/* COLORS:
+blu scuro: #041424
+azzurro: #98ccfd
+arancio-titolo: #FCE88B
+violetto: #c27efc

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="input-form">
+            <div class="cgmo-title">CGMO</div>
+            <form id="sign-in-form" method="post" onclick="return false">
+                <h3>Sign In</h3>
+                <div class="input-field">
+                    <img src="Images/user.svg"></img>
+                    <input type="text" id="user" placeholder="Nome Utente" required>
+                </div>
+                <div class="input-field">
+                    <img src="Images/lock.svg"></img>
+                    <input type="password" id="pass" placeholder="Password" required>
+                </div>
+                <button id="confirm-signin-button" onclick="signIn()">Conferma</button>
+                <h4 id="display-sign-up-text">Vuoi registrarti?</h4>
+            </form>
+            <button id="display-sign-up" onclick="displaySignUp()">Sign up</button>
+            <form id="sign-up-form" method="post" onclick="return false">
+                <h3>Sign Up</h3>
+                <div class="input-field">
+                    <img src="Images/user-add.svg"></img>
+                    <input type="text" id="new-user" placeholder="Nome utente" required>
+                </div>
+                <div class="input-field">
+                    <img src="Images/lock.svg"></img>
+                    <input type="password" id="new-pass" placeholder="Password" required>
+                </div>
+                <div class="input-field">
+                    <img src="Images/mail.png"></img>
+                    <input type="email" id="new-email" placeholder="Email" required>
+                </div>
+                <div class="input-field-vertical">
+                    <b><label>Scegli tre generi</label></b>
+                    <select class="selectTemplate" id="select-genres1" onfocus="getGenres(id)" required></select>
+                    <select class="selectTemplate" id="select-genres2" onfocus="getGenres(id)" required></select>
+                    <select class="selectTemplate" id="select-genres3" onfocus="getGenres(id)" required></select>
+                </div>
+                <div class="input-field-vertical">
+                    <b><label>Scegli tre artisti</label></b>
+                    
+                    <input type="text" class="selectTemplate" list="artists1" id="select-artist1"
+                        onkeyup="getArtists(id, 'artists1')" placeholder="Scegli un artista" required>
+                    <datalist id="artists1"></datalist>
+
+                    <input type="text" class="selectTemplate" list="artists2" id="select-artist2"
+                        onkeyup="getArtists(id, 'artists2')" placeholder="Scegli un artista" required>
+                    <datalist id="artists2"></datalist>
+
+                    <input type="text" class="selectTemplate" list="artists3" id="select-artist3"
+                        onkeyup="getArtists(id, 'artists3')" placeholder="Scegli un artista" required>
+                    <datalist id="artists3"></datalist>
+
+                </div>
+                <button id="confirm-signup-button" onclick="signUp()">Conferma</button>
+                <h4 id="display-sign-in-text">Sei già registrato?</h4>
+            </form>
+            <button id="display-sign-in" onclick="displaySignIn()">Sign in</button>
+        </div>
+    </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+
+</html>

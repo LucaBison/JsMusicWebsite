@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Homepage</title>
+</head>
+
+<body>
+    <div class="area-container">
+        <div class="cgmo-title">CGMO</div>
+        
+        <h3 id="private-area-title">Area Personale</h3>
+
+        <!-- CREDENCIALS -->
+
+        <button id="modify-button" onclick="setStorage(); window.location.href = 'credenziali.html' ">Modifica le tue impostazioni</button>            
+
+        <!-- PLAYLIST -->
+
+        <button type = "button"id="playlist-button" onclick="setStorage(); window.location.href = 'playlist.html' ">Le mie playlist</button>
+
+        <!-- ESPLORA -->
+
+        <button id="explore-button" onclick=" setStorage(); window.location.href = 'esplora.html' ">Scopri cosa ascoltano gli altri!</button>
+
+        <div id="logout-container"><button id="logout-button" onclick="logOut();">LogOut</button></div>
+
+    </div>
+    <script src="login.js"></script>
+</body>
+
+</html>

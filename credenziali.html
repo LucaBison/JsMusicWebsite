@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="area-container">
+        <div class="cgmo-title">CGMO</div>
+        <form id="modify-credencials-form" method="post" onclick="return false">
+            <h3>Modifica le tue credenziali</h3>
+            <div class="input-field">
+                <img src="Images/user-add.svg"></img>
+                <input type="text" id="modify-user" placeholder="Username" >
+            </div>
+            <div class="input-field">
+                <img src="Images/lock.svg"></img>
+                <input type="password" id="modify-pass" placeholder="Password" >
+            </div>
+            <div class="input-field">
+                <img src="Images/mail.png"></img>
+                <input type="email" id="modify-email" placeholder="Email" >
+            </div>
+            <div class="input-field-vertical">
+                <b><label>Scegli tre generi</label></b>
+                <select class="selectTemplate" id="modify-genres1" onfocus="getGenres(id)" ></select>
+                <select class="selectTemplate" id="modify-genres2" onfocus="getGenres(id)" ></select>
+                <select class="selectTemplate" id="modify-genres3" onfocus="getGenres(id)" ></select>
+            </div>
+            <div class="input-field-vertical">
+                <b><label>Scegli tre artisti</label></b>
+                <input type="text" class="selectTemplate" list="artists1" id="modify-artist1"
+                    onkeyup="getArtists(id, 'artists1')" placeholder="Scegli un artista" >
+                <datalist id="artists1"></datalist>
+                <input type="text" class="selectTemplate" list="artists2" id="modify-artist2"
+                    onkeyup="getArtists(id, 'artists2')" placeholder="Scegli un artista" >
+                <datalist id="artists2"></datalist>
+                <input type="text" class="selectTemplate" list="artists3" id="modify-artist3"
+                    onkeyup="getArtists(id, 'artists3')" placeholder="Scegli un artista" >
+                <datalist id="artists3"></datalist>
+            </div>
+            <button id="modify-confirm-button" onclick="modifyCredentials()">Conferma</button>
+            <button id="cancel-profile-button" onclick="deleteProfile()">Elimina profilo</button>
+            <button id="cancel-confirm-button" onclick="deleteConfirm()">Conferma</button>
+        </form>
+        <div id="homepage-container">
+            <button id="homepage-button" onclick="setStorage(); window.location.href = 'Homepage.html'">Torna
+                alla home</button>
+        </div>
+    </div>
+    <script src=" login.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="area-container">
+        <div class="cgmo-title">CGMO</div>
+        <h3 id = "crea-nuova-playlist">Crea una nuova playlist</h3>
+        <button id="playlist-creator-button" onclick="displayCreatePlaylist()">Crea una playlist</button>
+        <h3 id="le-tue-playlist">Le tue playlists</h3>
+        <h3 id="crea-playlist">Nuova playlist</h3>
+        <div id="div1"></div>
+        <form id="create-playlist-form" method="post">
+            <div class="input-field">
+                <input type="text" id="playlist-name" placeholder="Nome Playlist" required>
+            </div>
+            <div class="input-field">
+                <input type="text" id="playlist-description" placeholder="Descrizione" required>
+            </div>
+            <div id="add-tag-container">
+                <div class="input-field">
+                    <input type="text" id="tag-create" placeholder="Tags" required>
+                </div>
+                <button type="button" id="add-tag-button" onclick="addTagCreate()"></button>
+            </div>
+
+            <div class="input-field">
+                <input type="radio" class="options-select" name="select-visibility" id="option-1" value="pubblica">
+                <label for="option-1" class="options">Pubblica</label>
+                <input type="radio" class="options-select" name="select-visibility" value="privata" checked>
+                <label for="option-2" class="options">Privata</label>
+
+            </div>
+            <button type="button" id="create-playlist-confirm-button" onclick="createPlaylist()">Conferma</button>
+
+        </form>
+                
+        <div id="homepage-container">
+            <button id="homepage-button" onclick="setStorage(); window.location.href = 'Homepage.html'">Torna
+                alla home</button>
+        </div>
+    </div>
+    <script src="playlist.js"></script>
+
+</body>
+
+</html>

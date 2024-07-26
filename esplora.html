@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div id="explore-container">
+        <div class="cgmo-title">CGMO</div>
+        <h3>Esplora</h3>
+
+        <div id="search-song-container">
+        <input type="text" class="selectTemplate" list="tracks" id="add-track" onkeyup="getSongAPI(id, 'tracks')"
+                placeholder="Cerca una canzone" required>
+            <datalist id="tracks"></datalist>
+            <button type="button" id="song-search-button" onclick="searchSong(); setStorage()"></button>
+        </div>
+        <div id="search-tag-container">
+        <input type="text" id="search-tag" class="selectTemplate" placeholder="Cerca un tag" required>
+            <button type="button" id="tag-search-button" onclick="searchTag(); setStorage()"></button>
+        </div>
+
+        <div id="div1"></div>
+        
+        <div id="homepage-container">
+            <button id="homepage-button" onclick="setStorage(); window.location.href = 'Homepage.html'">Torna
+                alla home</button>
+        </div>
+    </div>
+    <script defer src="esplora.js"></script> 
+</body>
+
+</html>
